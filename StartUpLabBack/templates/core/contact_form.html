@@ -1,0 +1,65 @@
+<section class="py-10 bg-white">
+  <div class="container d-flex justify-content-center">
+    <div class="w-100" style="max-width: 720px;">
+      <div class="shadow rounded-xl bg-white p-4 p-md-5">
+
+        {% if success %}
+          <div class="alert alert-success text-center mb-4">
+            ¡Mensaje enviado! Nos pondremos en contacto contigo pronto.
+          </div>
+        {% endif %}
+
+        <form method="post">
+          {% csrf_token %}
+
+          <div class="row mb-4">
+            <div class="col-md-6">
+              <label for="name" class="form-label">Nombre completo</label>
+              <input type="text" name="name" id="name" required class="form-control"
+                     placeholder="Tu nombre" value="{{ form.name.value|default_if_none:'' }}">
+            </div>
+            <div class="col-md-6">
+              <label for="email" class="form-label">Correo electrónico</label>
+              <input type="email" name="email" id="email" required class="form-control"
+                     placeholder="Tu correo" value="{{ form.email.value|default_if_none:'' }}">
+            </div>
+          </div>
+
+          <div class="row mb-4">
+            <div class="col-md-6">
+              <label for="phone" class="form-label">Teléfono</label>
+              <input type="text" name="phone" id="phone" class="form-control"
+                     placeholder="Tu número" value="{{ form.phone.value|default_if_none:'' }}">
+            </div>
+            <div class="col-md-6">
+              <label for="company" class="form-label">Empresa</label>
+              <input type="text" name="company" id="company" class="form-control"
+                     placeholder="Nombre de tu empresa" value="{{ form.company.value|default_if_none:'' }}">
+            </div>
+          </div>
+
+          <div class="mb-4">
+            <label for="interest" class="form-label">Estoy interesado en</label>
+            <select name="interest" id="interest" class="form-select" required>
+              <option value="" disabled {% if not form.interest.value %}selected{% endif %}>Selecciona una opción</option>
+              <option value="consulting" {% if form.interest.value == "consulting" %}selected{% endif %}>Consultoría y Soporte</option>
+              <option value="implementation" {% if form.interest.value == "implementation" %}selected{% endif %}>Implementación y Ejecución</option>
+              <option value="both" {% if form.interest.value == "both" %}selected{% endif %}>Ambos servicios</option>
+              <option value="other" {% if form.interest.value == "other" %}selected{% endif %}>Otra consulta</option>
+            </select>
+          </div>
+
+          <div class="mb-4">
+            <label for="message" class="form-label">Mensaje</label>
+            <textarea name="message" id="message" rows="4" class="form-control"
+                      placeholder="Cuéntanos sobre tus necesidades..." required>{{ form.message.value|default_if_none:'' }}</textarea>
+          </div>
+
+          <button type="submit" class="w-100 btn btn-gradient text-white">
+            Enviar mensaje
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>

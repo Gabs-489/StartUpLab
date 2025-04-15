@@ -1,0 +1,132 @@
+<section class="py-5 bg-white">
+    <div class="container">
+      <div class="text-center mb-5">
+        <h2 class="display-4 font-weight-bold mb-3">Nuestros Servicios</h2>
+        <p class="lead text-muted mx-auto detalles" style="max-width: 800px;">
+          Elige cómo quieres aprovechar la IA en tu negocio: aprende e implementa con nuestra ayuda,
+          o déjanos encargarnos de todo por ti.
+        </p>
+      </div>
+  
+      <!-- Consultoría -->
+      <div class="mb-5">
+        <h3 class="h4 font-weight-bold mb-4 text-center">
+          <span class="gradient-text">Consultoría y Acompañamiento</span>
+        </h3>
+        <div class="row g-4">
+          <!-- Tarjetas de servicios de consultoría -->
+          <div class="col-md-6 col-lg-4">
+            <div class="card h-100 border-light shadow-sm ">
+              <div class="card-body text-center d-flex flex-column justify-content-center align-items-center">
+                <div class="bg-light rounded-circle p-3 mb-4" style="width: 56px; height: 56px;">
+                  <i class="bi bi-book color-iconos3"></i>
+                </div>
+                <h5 class="card-title font-weight-bold mb-2">Educación práctica</h5>
+                <p class="card-text text-muted mb-4">Aprende qué es la IA, cómo funciona y cómo puede aportar valor real a tu negocio.</p>
+                <a href="{% url 'consulting' %}#educacion" class="btn solicita-ayuda w-100">
+                  Saber más
+                </a>
+              </div>
+            </div>
+          </div>
+  
+          <div class="col-md-6 col-lg-4">
+            <div class="card h-100 border-light shadow-sm">
+              <div class="card-body text-center d-flex flex-column justify-content-center align-items-center">
+                <div class="bg-light rounded-circle p-3 mb-4" style="width: 56px; height: 56px;">
+                  <i class="bi bi-gear color-iconos3"></i>
+                </div>
+                <h5 class="card-title font-weight-bold mb-2">Entrenamiento guiado</h5>
+                <p class="card-text text-muted mb-4">Instrucción paso a paso para utilizar herramientas de IA según tus necesidades.</p>
+                <a href="{% url 'consulting' %}#entrenamiento" class="btn solicita-ayuda w-100">
+                  Saber más
+                </a>
+              </div>
+            </div>
+          </div>
+  
+          <div class="col-md-6 col-lg-4">
+            <div class="card h-100 border-light shadow-sm">
+              <div class="card-body text-center d-flex flex-column justify-content-center align-items-center">
+                <div class="bg-light rounded-circle p-3 mb-4" style="width: 56px; height: 56px;">
+                  <i class="bi bi-chat color-iconos3"></i>
+                </div>
+                <h5 class="card-title font-weight-bold mb-2">Foro de preguntas</h5>
+                <p class="card-text text-muted mb-4">Resuelve todas tus dudas sobre el uso e implementación de herramientas de IA.</p>
+                <a href="{% url 'consulting' %}#foro" class="btn solicita-ayuda w-100">
+                  Saber más
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+  
+        <div class="text-center mt-4">
+          <a href="consulting/" class="btn btn-gradient px-4 py-2 font-weight-bold text-white">
+            Explorar servicios de consultoría
+          </a>
+        </div>
+      </div>
+  
+      <!-- Implementación -->
+      <div>
+        <h3 class="h4 font-weight-bold mb-4 text-center">
+          <span class="gradient-text">Implementación y Ejecución</span>
+        </h3>
+        <div class="row g-4">
+          <!-- Tarjetas de servicios de implementación -->
+          <div class="col-md-6 col-lg-4">
+            <div class="card h-100 border-light shadow-sm">
+              <div class="card-body text-center d-flex flex-column justify-content-center align-items-center">
+                <div class="bg-light rounded-circle p-3 mb-4" style="width: 56px; height: 56px; transform: rotate(-25deg);">
+                  <i class="bi bi-puzzle color-iconos3 "></i>
+                </div>
+                <h5 class="card-title font-weight-bold mb-2">Configuración e integración</h5>
+                <p class="card-text text-muted mb-4">Instalamos y conectamos herramientas de IA adaptadas a tu flujo de trabajo.</p>
+                <a href="{% url 'implementation' %}#configuration" class="btn solicita-ayuda w-100">
+                  Saber más
+                </a>
+              </div>
+            </div>
+          </div>
+  
+          <div class="col-md-6 col-lg-4">
+            <div class="card h-100 border-light shadow-sm ">
+              <div class="card-body text-center  d-flex flex-column justify-content-center align-items-center">
+                <div class="bg-light rounded-circle p-3 mb-4 d-flex justify-content-center align-items-center" style="width: 56px; height: 56px;">
+                  <i class="bi bi-lightning-charge color-iconos3"></i>
+                </div>
+                <h5 class="card-title font-weight-bold mb-2">Creación inteligente de contenido</h5>
+                <p class="card-text text-muted mb-4">Generación automática de contenido para redes sociales, videos, imágenes y emails.</p>
+                <a href="{% url 'implementation' %}#content" class="btn solicita-ayuda w-100">
+                  Saber más
+                </a>
+              </div>
+            </div>
+          </div>
+  
+          <div class="col-md-6 col-lg-4">
+            <div class="card h-100 border-light shadow-sm">
+              <div class="card-body text-center d-flex flex-column justify-content-center align-items-center">
+                <div class="bg-light rounded-circle p-3 mb-4" style="width: 56px; height: 56px;">
+                  <i class="bi bi-headphones color-iconos3"></i>
+                </div>
+                <h5 class="card-title font-weight-bold mb-2">Soporte técnico</h5>
+                <p class="card-text text-muted mb-4">Soporte continuo y mantenimiento mensual de tus sistemas de IA.</p>
+                <a href="{% url 'implementation' %}#support" class="btn solicita-ayuda w-100">
+                  Saber más
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+  
+        <div class="text-center mt-4">
+          <a href="implementation/" class="btn btn-gradient px-4 py-2 font-weight-bold text-white">
+            Explorar servicios de implementación
+          </a>
+        </div> 
+      </div>
+    </div>
+  </section>
+  

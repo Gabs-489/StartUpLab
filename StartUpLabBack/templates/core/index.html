@@ -1,0 +1,85 @@
+{% extends 'core/base.html' %}
+{% load static %}
+
+{% block content %}
+<div class="min-vh-100 d-flex flex-column">
+
+  <main class="flex-grow-1">
+    {% include 'core/hero.html' %}
+    {% include 'core/services.html' %}
+
+    <!-- ¿Por qué elegirnos? -->
+    <section class="py-5 bg-light">
+      <div class="container">
+        <div class="text-center mb-5">
+          <h2 class="display-4 font-weight-bold mb-3">¿Por qué elegir StartUpLab?</h2>
+          <p class="lead text-muted mx-auto detalles" style="max-width: 800px;">
+            Combinamos la experiencia en IA con el conocimiento empresarial para ofrecer soluciones que realmente funcionan para tu organización.
+          </p>
+        </div>
+
+        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+          <div class="col">
+            <div class="card h-100 shadow-sm border-light rounded">
+              <div class="card-body">
+                <h3 class="card-title h5 font-weight-bold mb-2">Enfoque práctico</h3>
+                <p class="card-text text-muted">
+                  Nada de palabras de moda o promesas vacías. Nos enfocamos en aplicaciones prácticas de IA que entregan resultados medibles.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col">
+            <div class="card h-100 shadow-sm border-light rounded">
+              <div class="card-body">
+                <h3 class="card-title h5 font-weight-bold mb-2">Equipo Experto</h3>
+                <p class="card-text text-muted">
+                  Nuestro equipo combina experiencia técnica en IA con conocimiento empresarial en diversas industrias.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col">
+            <div class="card h-100 shadow-sm border-light rounded">
+              <div class="card-body">
+                <h3 class="card-title h5 font-weight-bold mb-2">Orientados a Resultados</h3>
+                <p class="card-text text-muted">
+                  Medimos el éxito por las mejoras tangibles en los procesos y resultados de tu negocio.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Llamado a la acción (CTA) -->
+    <section class="py-5 text-white text-center gradient-bg llamar-accion" >
+      <h2 class="display-4 font-weight-bold mb-4">¿Listo para transformar tu negocio con IA?</h2>
+      <p class="lead mb-4 detalles" style="color: white;">
+        Ya sea que quieras aprender e implementar IA por ti mismo o que nos dejes manejar todo, estamos aquí para ayudarte a tener éxito.
+      </p>
+      <div class="d-flex flex-column flex-sm-row gap-3 justify-content-center">
+        <a href="consulting/" class="btn btn-light btn-lg" style="color: #147088; font-size: large;">Aprende IA con nosotros →</a>
+        <a href="implementation/" class="btn btn-light btn-lg" style="color: #147088; font-size: large">Obtén ayuda con la implementación →</a>
+      </div>
+    </section>
+
+    <!-- Contacto -->
+    <section class="py-5 bg-white" id="contact">
+      <div class="container">
+        <div class="text-center mb-5">
+          <h2 class="display-4 font-weight-bold mb-3">Contáctanos</h2>
+          <p class="lead text-muted mx-auto detalles" style="max-width: 800px;">
+            ¿Tienes preguntas o estás listo para comenzar? Contáctanos y estaremos encantados de ayudarte.
+          </p>
+        </div>
+        {% include 'core/contact_form.html' %}
+      </div>
+    </section>
+  </main>
+
+</div>
+{% endblock %}

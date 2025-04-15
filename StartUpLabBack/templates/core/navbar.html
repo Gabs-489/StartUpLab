@@ -1,0 +1,35 @@
+{% load static %}
+
+<nav class="navbar navbar-expand-lg navbar-light bg-white py-4 sticky-top shadow-sm">
+  <div class="container-fluid">
+    <!-- Logo -->
+    <a href="/" class="navbar-brand d-flex align-items-center">
+      <span class="h2 font-weight-bold gradient-text" >StartUpLab</span>
+      <img src="{% static 'images/logo.png' %}" alt="Logo" width="50">
+    </a>
+
+    <!-- Botón del menú móvil -->
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+      aria-controls="navbarNav" aria-expanded="false" aria-label="Alternar menú">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Elementos del menú en escritorio -->
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item">
+          <a href="/" class="nav-link">Inicio</a>
+        </li>
+        <li class="nav-item">
+          <a href="/consulting" class="nav-link">Consultoría</a>
+        </li>
+        <li class="nav-item">
+          <a href="/implementation" class="nav-link">Implementación</a>
+        </li>
+        <li class="nav-item">
+          <a href="/contact" class="btn btn-gradient text-white">Contáctanos</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>

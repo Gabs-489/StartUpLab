@@ -1,0 +1,75 @@
+{% load static %}
+
+<footer class="text-white py-5" style="background-color: #07242b;" >
+  <div class="container">
+    <div class="row g-4">
+      <!-- Información de la empresa -->
+      <div class="col-12 col-md-6 col-lg-3">
+        <h3 class="h4 font-weight-bold mb-4 text-gradient">StartUpLab</h3>
+        <p>Empoderando a las empresas con soluciones de IA que impulsan la eficiencia, innovación y crecimiento.</p>
+        <div class="d-flex gap-3 mt-4">
+          <a href="#" class="text-white">
+            <img src="{% static 'icons/facebook.svg' %}" alt="Facebook" width="20" height="20" />
+          </a>
+          <a href="#" class="text-white">
+            <img src="{% static 'icons/twitter.svg' %}" alt="Twitter" width="20" height="20" />
+          </a>
+          <a href="#" class="text-white">
+            <img src="{% static 'icons/instagram.svg' %}" alt="Instagram" width="20" height="20" />
+          </a>
+          <a href="#" class="text-white">
+            <img src="{% static 'icons/linkedin.svg' %}" alt="LinkedIn" width="20" height="20" />
+          </a>
+        </div>
+      </div>
+
+      <!-- Enlaces rápidos -->
+      <div class="col-12 col-md-6 col-lg-3">
+        <h4 class="h5 font-weight-bold mb-3">Enlaces rápidos</h4>
+        <ul class="list-unstyled">
+          <li><a href="" class="text-white text-decoration-none hover-text-primary">Inicio</a></li>
+          <li><a href="consulting/" class="text-white text-decoration-none hover-text-primary">Consultoría y Soporte</a></li>
+          <li><a href="implementation/" class="text-white text-decoration-none hover-text-primary">Implementación</a></li>
+          <li><a href="contact/" class="text-white text-decoration-none hover-text-primary">Contacto</a></li>
+        </ul>
+      </div>
+
+      <!-- Servicios -->
+      <div class="col-12 col-md-6 col-lg-3">
+        <h4 class="h5 font-weight-bold mb-3">Nuestros servicios</h4>
+        <ul class="list-unstyled">
+          <li><a href="{% url 'consulting' %}#educacion" class="text-white text-decoration-none hover-text-primary">Educación en IA</a></li>
+          <li><a href="{% url 'consulting' %}#entrenamiento" class="text-white text-decoration-none hover-text-primary">Entrenamiento guiado</a></li>
+          <li><a href="{% url 'implementation' %}#configuration" class="text-white text-decoration-none hover-text-primary">Integración de herramientas de IA</a></li>
+          <li><a href="{% url 'implementation' %}#content" class="text-white text-decoration-none hover-text-primary">Creación de contenido</a></li>
+          <li><a href="{% url 'implementation' %}#support" class="text-white text-decoration-none hover-text-primary">Soporte técnico</a></li>
+        </ul>
+      </div>
+
+      <!-- Información de contacto -->
+      <div class="col-12 col-md-6 col-lg-3">
+        <h4 class="h5 font-weight-bold mb-3">Contáctanos</h4>
+        <ul class="list-unstyled">
+          <li class="d-flex align-items-start">
+            <img src="{% static 'icons/map-pin.svg' %}" alt="Ubicación" class="me-3 h-5 w-5 text-primary"  width="20" height="20" />
+            <span>Bogotá, Colombia<br />Universidad de los Andes</span>
+          </li>
+          <li class="d-flex align-items-center">
+            <img src="{% static 'icons/phone.svg' %}" alt="Teléfono" class="me-3 h-5 w-5 text-primary" width="20" height="20"  />
+            <span>+57 (300) 123-4567</span>
+          </li>
+          <li class="d-flex align-items-center">
+            <img src="{% static 'icons/mail.svg' %}" alt="Correo" class="me-3 h-5 w-5 text-primary"  width="20" height="20" />
+            <a href="mailto:info@processmastery.ai" class="text-white hover-text-primary">StartUpLab@gmail.com</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <hr class="border-secondary my-4" />
+
+    <div class="text-center text-muted">
+      <p style="color: white;">&copy; {{ current_year }} StartUpLab. Todos los derechos reservados.</p>
+    </div>
+  </div>
+</footer>

@@ -1,0 +1,188 @@
+<!-- templates/consultoria.html -->
+{% extends "core/base.html" %}
+{% block title %}Consultoría y Soporte{% endblock %}
+
+{% block content %}
+
+<!-- Hero -->
+<section class="py-5 gradient-bg text-center">
+    <div class="container">
+        <h1 class="display-4 mb-4">Consultoría y <span class="gradient-text">Soporte</span></h1>
+        <p class="lead text-muted mb-4">Para quienes desean aprender, aplicar y mantener el control sobre sus procesos de IA. Te acompañamos en cada paso.</p>
+        <a href="#educacion" class="btn btn-gradient btn-lg">Explorar nuestros servicios</a>
+    </div>
+</section>
+
+<!-- Educación -->
+<section class="py-5 bg-white" id="educacion">
+    <div class="container">
+        <div class="row align-items-center g-5">
+            <div class="col-lg-6">
+                <img src="https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?auto=format&fit=crop&q=80&w=600"
+                     class="img-fluid rounded img-custom-shadow-1" alt="Educación IA">
+            </div>
+            <div class="col-lg-6">
+                <div class="mb-4">
+                    <div class=" d-flex flex-column justify-content-center align-items-center rounded-circle p-3 mb-4" style="width: 50px; height: 50px; background-color: #2bbce032;">
+                        <i class="bi bi-book" style="color:#2BBCE0;"></i> 
+                    </div>
+                </div>
+                <h2 class="h1 fw-bold">Educación práctica sobre IA</h2>
+                <p class="detalles">Comprende la IA más allá del marketing. Nuestro enfoque educativo se centra en explicar qué es la IA, cómo funciona y cómo puede aportar valor real y medible a tu negocio.</p>
+                <ul class="list-unstyled">
+                    <li class="mb-2"><i class="bi bi-check2-circle  color-iconos1 me-2"></i>Desmitificación de conceptos de IA</li>
+                    <li class="mb-2"><i class="bi bi-check2-circle    color-iconos1 me-2"></i>Casos de estudio por industria</li>
+                    <li class="mb-2"><i class="bi bi-check2-circle   color-iconos1 me-2"></i>Identificación de aplicaciones prácticas</li>
+                    <li class="mb-2"><i class="bi bi-check2-circle   color-iconos1 me-2"></i>Enfoque en retorno de inversión (ROI)</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Entrenamiento -->
+<section class="py-5 bg-light" id="entrenamiento">
+    <div class="container">
+        <div class="row align-items-center g-5 flex-lg-row-reverse">
+            <div class="col-lg-6">
+                <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&q=80&w=600"
+                     class="img-fluid rounded img-custom-shadow-2" alt="Entrenamiento guiado">
+            </div>
+            <div class="col-lg-6">
+                <div class="mb-4">
+                    <div class=" d-flex flex-column justify-content-center align-items-center rounded-circle p-3 mb-4" style="width: 50px; height: 50px; background-color: #01d56f46;">
+                        <i class="bi bi-gear" style="color:#01D56F;"></i> 
+                    </div>
+                </div>
+                <h2 class="h1 fw-bold">Entrenamiento Guiado</h2>
+                <p class="detalles">Nuestros programas enseñan a tu equipo cómo usar herramientas de IA de forma efectiva: desde chatbots hasta sistemas de contenido automatizado.</p>
+                <ul class="list-unstyled">
+                    <li class="mb-2"><i class="bi bi-check2-circle color-iconos2 me-2"></i>Talleres prácticos con aplicaciones reales</li>
+                    <li class="mb-2"><i class="bi bi-check2-circle color-iconos2 me-2"></i>Material personalizado</li>
+                    <li class="mb-2"><i class="bi bi-check2-circle color-iconos2 me-2"></i>Buenas prácticas para prompt engineering</li>
+                    <li class="mb-2"><i class="bi bi-check2-circle color-iconos2 me-2"></i>Sesiones de seguimiento</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Foro -->
+<section class="py-5 bg-white" id="foro">
+    <div class="container">
+        <div class="row align-items-center g-5">
+            <div class="col-lg-6">
+                <img src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&q=80&w=600"
+                     class="img-fluid rounded img-custom-shadow-1" alt="Foro de preguntas">
+            </div>
+            <div class="col-lg-6">
+                <div class="mb-4">
+                    <div class=" d-flex flex-column justify-content-center align-items-center rounded-circle p-3 mb-4" style="width: 50px; height: 50px; background-color: #2bbce032;">
+                        <i class="bi bi-chat" style="color:#2BBCE0;"></i> 
+                    </div>
+                </div>
+                <h2 class="h1 fw-bold">Foro de Preguntas</h2>
+                <p class="detalles">Nuestro foro dedicado ofrece soporte continuo y respuestas a tus preguntas sobre la implementación y uso de la IA.</p>
+                <ul class="list-unstyled">
+                    <li class="mb-2"><i class="bi bi-check2-circle   color-iconos1 me-2"></i>Respuestas rápidas</li>
+                    <li class="mb-2"><i class="bi bi-check2-circle   color-iconos1 me-2"></i>Comunidad de empresas afines</li>
+                    <li class="mb-2"><i class="bi bi-check2-circle   color-iconos1 me-2"></i>Webinars frecuentes</li>
+                    <li class="mb-2"><i class="bi bi-check2-circle   color-iconos1 me-2"></i>Base de conocimientos compartida</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!--Precios-->
+<section class="py-5 bg-light">
+    <div class="container">
+      <div class="text-center mb-5">
+        <h2 class="fw-bold mb-3">Paquetes de Consultoría</h2>
+        <p class="text-muted fs-5 mx-auto" style="max-width: 700px;">
+          Elige el paquete de consultoría que mejor se adapte a las necesidades y objetivos de tu empresa.
+        </p>
+      </div>
+  
+      <div class="row g-4 justify-content-center">
+        <!-- Starter -->
+        <div class="col-md-6 col-lg-4">
+          <div class="card h-100 border">
+            <div class="card-body d-flex flex-column p-4">
+              <h5 class="card-title fw-bold">Inicial</h5>
+              <h3 class="fw-bold mb-0">$1.499</h3>
+              <p class="text-muted mb-4">Pago único</p>
+              <ul class="list-unstyled mb-4 flex-grow-1">
+                <li class="mb-2"><i class="bi bi-check2-circle color-iconos3  me-2"></i>Taller educativo de 4 horas</li>
+                <li class="mb-2"><i class="bi bi-check2-circle color-iconos3  me-2"></i>Capacitación básica en 1 herramienta de IA</li>
+                <li class="mb-2"><i class="bi bi-check2-circle color-iconos3  me-2"></i>Acceso al foro por 1 mes</li>
+                <li class="mb-2"><i class="bi bi-check2-circle color-iconos3  me-2"></i>Soporte por correo electrónico</li>
+              </ul>
+              <a href="#" class="btn aprende-ia w-100">Comenzar</a>
+            </div>
+          </div>
+        </div>
+  
+        <!-- Professional -->
+        <div class="col-md-6 col-lg-4">
+          <div class="card h-100 shadow" style="border-color: #20a6c8;">
+            <div class="position-absolute top-0 end-0 text-white px-3 py-1 rounded-bottom-start small fw-bold rounded-1" style="background-color: #1994B3; ">
+              MÁS POPULAR
+            </div>
+            <div class="card-body d-flex flex-column p-4">
+              <h5 class="card-title fw-bold">Profesional</h5>
+              <h3 class="fw-bold mb-0">$3.999</h3>
+              <p class="text-muted mb-4">Pago único</p>
+              <ul class="list-unstyled mb-4 flex-grow-1">
+                <li class="mb-2"><i class="bi bi-check2-circle color-iconos3  me-2"></i>Taller educativo de 8 horas</li>
+                <li class="mb-2"><i class="bi bi-check2-circle color-iconos3  me-2"></i>Capacitación avanzada en 3 herramientas de IA</li>
+                <li class="mb-2"><i class="bi bi-check2-circle color-iconos3  me-2"></i>Acceso al foro por 6 meses</li>
+                <li class="mb-2"><i class="bi bi-check2-circle color-iconos3  me-2"></i>Soporte prioritario por correo y teléfono</li>
+                <li class="mb-2"><i class="bi bi-check2-circle color-iconos3  me-2"></i>2 sesiones de seguimiento</li>
+              </ul>
+              <a href="#" class="btn aprende-ia w-100">Comenzar</a>
+            </div>
+          </div>
+        </div>
+  
+        <!-- Enterprise -->
+        <div class="col-md-6 col-lg-4">
+          <div class="card h-100 border">
+            <div class="card-body d-flex flex-column p-4">
+              <h5 class="card-title fw-bold">Empresarial</h5>
+              <h3 class="fw-bold mb-0">A medida</h3>
+              <p class="text-muted mb-4">Solución personalizada</p>
+              <ul class="list-unstyled mb-4 flex-grow-1">
+                <li class="mb-2"><i class="bi bi-check2-circle color-iconos3  me-2"></i>Programa educativo personalizado</li>
+                <li class="mb-2"><i class="bi bi-check2-circle color-iconos3  me-2"></i>Capacitación en herramientas ilimitadas</li>
+                <li class="mb-2"><i class="bi bi-check2-circle color-iconos3  me-2"></i>Acceso ilimitado al foro</li>
+                <li class="mb-2"><i class="bi bi-check2-circle color-iconos3  me-2"></i>Gestor de soporte dedicado</li>
+                <li class="mb-2"><i class="bi bi-check2-circle color-iconos3  me-2"></i>Sesiones estratégicas trimestrales</li>
+              </ul>
+              <a href="#" class="btn aprende-ia w-100">Contáctanos</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+</section>
+
+<!-- Sección de Contacto -->
+<section class="py-5 bg-white" id="contacto">
+    <div class="container">
+        <div class="text-center mb-5">
+        <h2 class="h3 fw-bold mb-3">¿Listo para comenzar?</h2>
+        <p class="lead detalles mx-auto" style="max-width: 768px;">
+            Contáctanos hoy mismo para hablar sobre cómo nuestros servicios de consultoría y soporte pueden ayudar a tu empresa a tener éxito con IA.
+        </p>
+        </div>
+        {% include 'core/contact_form.html' %}
+    </div>
+</section>
+  
+
+  
+  
+  
+
+{% endblock %}
