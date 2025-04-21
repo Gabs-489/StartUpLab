@@ -1,0 +1,109 @@
+{% extends "core/base.html" %}
+{% block title %}Consultoría y Soporte{% endblock %}
+
+{% block content %}
+<div class="container py-5">
+    <h1 class="text-center mb-3">Solicitudes de Implementación</h1>
+    <p class="text-center detalles mb-4">
+      Envía nuevas solicitudes de implementación o consulta las ya resueltas.
+    </p>
+  
+    <!-- Sección: Nueva Solicitud -->
+    <div class="mb-4 border border-info bg-light p-4 rounded d-flex align-items-start gap-3">
+      <div class="bg-info bg-opacity-25 p-2 rounded-circle">
+        <i class="bi bi-plus-lg text-info fs-4"></i>
+      </div>
+      <div>
+        <h5 class="mb-1 text-dark">Adquirir una nueva solicitud de implementación</h5>
+        <p class="mb-0 detalles">¿Listo para empezar una solución impulsada por IA? Adquiere un nuevo plan de implementación.</p>
+      </div>
+    </div>
+    
+    <!-- Sección: Solicitudes disponibles -->
+    <div class="mb-4 border border-secondary bg-light p-4 rounded">
+      <div class="d-flex align-items-center justify-content-between">
+        <div class="d-flex align-items-center gap-3">
+          <div class="text-secondary fs-4">
+            <i class="bi bi-clipboard-check"></i>
+          </div>
+          <h5 class="mb-0">Solicitud disponible</h5>
+        </div>
+        <button class="btn solicita-ayuda" type="button" data-bs-toggle="collapse" data-bs-target="#formularioSolicitud">
+          Nueva solicitud
+        </button>
+      </div>
+    </div>
+    
+    
+    <div class="collapse" id="formularioSolicitud">
+      <form method="post" class="bg-white shadow-sm rounded p-4 mb-5">
+        {% csrf_token %}
+
+        <div class="mb-3">
+          <label for="servicio" class="form-label">Seleccionar Servicio</label>
+          <select name="servicio" class="form-select" id="id_servicio">
+            {% for w in waiting %}
+              <option value="{{ w.id }}">{{ w.servicio }}</option>
+            {% empty %}
+              <option disabled>No hay servicios disponibles.</option>
+            {% endfor %}
+          </select>
+        </div>
+    
+        <div class="mb-3">
+          <label for="title" class="form-label">Título de la solicitud</label>
+          <input type="text" name="title" id="title" class="form-control" required>
+        </div>
+
+        <div class="mb-3">
+          <label for="description" class="form-label">Descripción</label>
+          <textarea name="description" id="description" rows="3" class="form-control" required></textarea>
+        </div>
+
+        <button type="submit" class="btn aprende-ia w-100">Enviar solicitud</button>
+      </form>
+    </div>
+    
+    
+    <!-- Solicitudes resueltas -->
+    <h3 class="mb-3">Solicitudes pendientes</h3>
+    <div class="d-grid gap-3 mx-auto">
+      {% for p in pending %}
+      <div class="border rounded p-3 bg-light d-flex justify-content-between align-items-center">
+        <div class="d-flex gap-3 align-items-center">
+          <span class="badge bg-warning text-white align-self-center">Pendiente</span>
+          <div>
+            <strong>{{ p.title }}</strong><br>
+            <small class="text-muted">{{ p.description }}</small>
+          </div>
+        </div>
+        <a href="#" class="btn solicita-ayuda btn-sm">Ver estado</a>
+      </div>
+      {% empty %}
+        <p class="text-muted text-center">No hay solicitudes pendientes aún.</p>
+      {% endfor %}
+      
+    </div>
+    <br>
+    <!-- Solicitudes resueltas -->
+    <h3 class="mb-3">Solicitudes resueltas</h3>
+    <div class="d-grid gap-3">
+      {% for r in requests %}
+
+      <div class="border rounded p-3 bg-light d-flex justify-content-between align-items-center">
+        <div class="d-flex gap-3 align-items-center">
+          <span class="badge bg-success text-white align-self-center">Resuelto</span>
+          <div>
+            <strong>{{ r.title }}</strong><br>
+            <small class="text-muted">{{ r.description }}</small>
+          </div>
+        </div>
+        <a href="#" class="btn solicita-ayuda btn-sm">Ver resultado</a>
+      </div>
+      {% empty %}
+        <p class="text-muted text-center">No hay solicitudes resueltas aún.</p>
+      {% endfor %}
+      
+    </div>
+</div>
+{% endblock %}

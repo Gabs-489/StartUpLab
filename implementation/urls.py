@@ -19,5 +19,6 @@ from .views import *
 
 urlpatterns = [
     path("", implementation, name='implementation'),
+    path("pedidos", pedidos, name='pedidos'),
 ]
 
