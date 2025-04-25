@@ -18,6 +18,7 @@ from django.urls import path
 from .views import *
 
 urlpatterns = [
-    path("", consulting, name='consulting')
+    path("", consulting, name='consulting'),
+    path("videos", videos_consultoria, name='videos_consultoria')
 ]
 

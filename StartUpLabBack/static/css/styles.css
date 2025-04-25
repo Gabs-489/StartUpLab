@@ -266,3 +266,10 @@ h1, h2, h3, h4, h5, h6 {
 .color-iconos3{
   color: var(--color_princial);
 }
+
+/*Barra Progreso*/
+
+.progreso-barra {
+  transition: width 0.3s ease;
+  
+}

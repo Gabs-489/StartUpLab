@@ -1,0 +1,51 @@
+{% extends "core/base.html" %}
+{% block title %}Videos Aprendizaje{% endblock %}
+
+{% load static %}
+{% block content %}
+<div class="container">
+<br>
+<h1 class="text-center mb-4">Ruta de Aprendizaje: Introducción a IA</h1>
+
+<!-- Barra de progreso -->
+<div class="mb-4">
+    <div class="d-flex justify-content-between mb-1">
+        <span class="text-muted small">Progreso</span>
+        <span class="small fw-semibold">{{ progreso }}% completado</span>
+    </div>
+    <div class="progress" style="height: 10px;">
+        <div class="progress-bar progreso-barra" role="progressbar" style="width: {{ progreso }}%; background-color: #1994b3;" ; aria-valuenow="{{ progreso }}" aria-valuemin="0" aria-valuemax="100"></div>
+    </div>  
+</div>
+
+<!-- Tarjetas de videos -->
+<div class="row g-4">
+    {% for video in videos %}
+    <div class="card mb-4 {% if not video.desbloqueado and not video.completado %}opacity-50 pointer-events-none{% endif %}">
+        <div class="row g-0 align-items-center">
+        <div class="col-md-3">
+            <img src="{% static video.imagen_url %}" alt="{{ video.titulo }}" class="img-fluid rounded-start">
+        </div>
+        <div class="col-md-9">
+            <div class="card-body">
+            <h5 class="card-title">Paso {{ forloop.counter }}: {{ video.titulo }}</h5>
+            <p class="card-text">{{ video.descripcion }}</p>
+            {% if video.completado %}
+                <p class="text-success fw-semibold">✅ Completado</p>
+            {% elif video.desbloqueado %}
+                <a href="#" class="btn" style= "color:white ; background-color: #1994b3;" >▶ Empezar</a>
+            {% else %}
+                <button class="btn btn-secondary" disabled>🔒 Bloqueado</button>
+            {% endif %}
+            </div>
+        </div>
+        </div>
+    </div>
+    {% endfor %}
+
+</div>
+
+<p class="text-center text-muted small mt-4">Más módulos próximamente. Tu progreso se guardará automáticamente.</p>
+</div>
+
+{% endblock %}
